@@ -57,6 +57,10 @@ resource "aws_lambda_function" "restaurant_lambda" {
   role             = aws_iam_role.lambda_exec_role.arn
   filename         = data.archive_file.lambda_zip.output_path
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
+  vpc_config {
+    subnet_ids         = [data.aws_subnets.private_subnets.id]
+    security_group_ids = [aws_security_group.lambda_sg.id]
+  }
   environment {
     variables = {
       RESTAURANT_STYLES   = local.restaurant_styles
@@ -68,4 +72,3 @@ resource "aws_lambda_function" "restaurant_lambda" {
   }
   depends_on = [data.archive_file.lambda_zip]
 }
-
