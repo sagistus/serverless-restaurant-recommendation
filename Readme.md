@@ -38,6 +38,11 @@ terraform init
 terraform apply
 ```
 
+### Architecture
+
+![Restaurant](images/Restaurant.png)
+
+
 ## Pricing
 
 
