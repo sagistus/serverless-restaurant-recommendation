@@ -38,27 +38,6 @@ terraform init
 terraform apply
 ```
 
-### Architecture
-
-![Restaurant](images/Restaurant.png)
-
-
-## Pricing
-
-
-For 50 million Lambda invocations and API Gateway requests per month, the estimated costs are:
-
-### Lambda Cost
-- **Invocations**: ~$10
-
-### API Gateway Cost
-- **Requests**: ~$175
-
-### Additional Notes
-- The pricing can vary based on the actual data transfer, memory configuration, and execution time of your Lambda functions.
-- For large-scale applications, extra charges for data transfer and CPU usage may apply.
-
-
 ### How To Invoke
 
 After running terraform apply, the URL for the API Gateway will be displayed as an output.
@@ -71,6 +50,32 @@ curl -v "<URL>" \
      -d '{"body": "vegetarian italian open now"}'
 ```
 
+### Architecture
+
+![Restaurant](images/Restaurant.png)
+
+
+## Pricing
+
+For 50 million Lambda invocations and API Gateway requests per month, the estimated costs are:
+
+### Lambda Cost
+ **Invocations**: ~$10
+
+### API Gateway Cost 
+ **Requests**: ~$175
+
+### Additional Notes
+- The pricing can vary based on the actual data transfer, memory configuration, and execution time of your Lambda functions.
+- For large-scale applications, extra charges for data transfer and CPU usage may apply.
 
 **Note**:
- The code has not been fully tested in a cloud environment, as it has not been deployed or executed on AWS. Some parts of the functionality may need further testing and adjustments before deployment.
+- The code has not been fully tested in a cloud environment, as it has not been deployed or executed on AWS.
+  Some parts of the functionality may need further testing and adjustments before deployment.
+
+
+- Moreover, The current Python implementation is designed to handle a specific input structure tailored to a particular
+  use cases.
+
+  To support more generalized or diverse inputs, especially those expressed in natural language,
+  we may consider integrating **NLP** or **LLM** techniques.
