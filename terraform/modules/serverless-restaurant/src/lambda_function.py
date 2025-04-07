@@ -103,12 +103,12 @@ class RestaurantQuery:
         query = QUERY
         values = [
             self.matched_styles if self.matched_styles else None,
-            self.matched_styles if self.matched_styles else None,
             self.vegetarian,
             self.delivery,
             now,
             now
         ]
+
         with conn.cursor() as cur:
             cur.execute(query, values)
             rows = cur.fetchall()
