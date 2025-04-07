@@ -81,20 +81,6 @@ class RestaurantQuery:
         self.delivery = delivery
         self.filtered_restaurant = []
 
-    def is_open_now(self, open_hour, close_hour):
-        try:
-            now = datetime.now().time()
-            open_time = datetime.strptime(open_hour, '%H:%M').time()
-            close_time = datetime.strptime(close_hour, '%H:%M').time()
-
-            if open_time < close_time: # night shifts
-                return open_time <= now < close_time
-            else:
-                return now >= open_time or now < close_time
-        except Exception as e:
-            logger.error(f'Error parsing time: {e}')
-            return False
-
     def get_data_from_db(self):
         if conn is None:
             raise Exception('No database connection available.')
