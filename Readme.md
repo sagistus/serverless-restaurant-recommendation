@@ -7,15 +7,14 @@ The API is implemented using AWS Lambda, Api Gateway and is deployed using Terra
 
 Before you begin, ensure you have the following installed:
 
-- Git
-- Python 3.9
-- Terraform v1.5.7 
-- AWS CLI (configured with your AWS credentials)
+- 🐙 Git  
+- 🐍 Python 3.9  
+- 🌍 Terraform v1.5.7  
+- ☁️ AWS CLI (configured with your AWS credentials)
 
+## 🚀 Installation Instructions
 
-## Installation Instructions
-
-### 1. Clone the Repository
+### 1. 🧱 Clone the Repository
 Clone the GitHub repository to your local machine:
 
 ```bash
@@ -23,7 +22,7 @@ git clone https://github.com/your-username/serverless-restaurant-recommendation.
 cd serverless-restaurant-recommendation
 ```
 
-### 2. Install Python Dependencies
+### 2. 📦 Install Python Dependencies
 Ensure that your Python dependencies are up to date.
 In case there are any new dependencies, you can install them by running the following:
 
@@ -55,7 +54,7 @@ curl -v "<URL>" \
 ![Restaurant](images/Restaurant.png)
 
 
-## Pricing
+## 💰 Pricing
 
 For 50 million Lambda invocations and API Gateway requests per month, the estimated costs are:
 
@@ -69,7 +68,7 @@ For 50 million Lambda invocations and API Gateway requests per month, the estima
 - The pricing can vary based on the actual data transfer, memory configuration, and execution time of your Lambda functions.
 - For large-scale applications, extra charges for data transfer and CPU usage may apply.
 
-**Note**:
+ 🧪 **Notes**:
 - The code has not been fully tested in a cloud environment, as it has not been deployed or executed on AWS.
   Some parts of the functionality may need further testing and adjustments before deployment.
 
