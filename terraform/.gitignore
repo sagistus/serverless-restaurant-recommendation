@@ -1,0 +1,30 @@
+# Local .terraform directory
+.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+
+# Excluded Terraform variable files
+*.tfvars
+*.tfvars.json
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# .terraform.lock.hcl is used to lock provider versions
+.terraform.lock.hcl
+
+# IDE and Editor specific files
+.vscode/
+.idea/
+*.swp
+
+# macOS system files
+.DS_Store
